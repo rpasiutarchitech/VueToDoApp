@@ -14,15 +14,15 @@
     import { Component, Vue } from 'vue-property-decorator';
     import { ADD_TO_DO } from '../store/store';
 
-    @Component({
-        data: function () {
+    @Component()
+    export default class ToDoCreate extends Vue {
+        toDoText: string;
+
+        data() {
             return {
                 toDoText: ''
             }
         }
-    })
-    export default class ToDoCreate extends Vue {
-        toDoText: string;
 
         createToDo() {
             this.$store.commit(ADD_TO_DO, {

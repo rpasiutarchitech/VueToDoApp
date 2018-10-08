@@ -9,17 +9,7 @@ export const ADD_TO_DO = 'ADD_TO_DO';
 
 const toDoStore: StoreOptions<ToDoState> = {
     state: {
-        toDos: [
-            {
-                text: 'first toDo'
-            },
-            {
-                text: 'second toDo'
-            },
-            {
-                text: 'third toDo'
-            }
-        ]
+        toDos: []
     },
     mutations: {
         [ADD_TO_DO](toDoState: ToDoState, payload: ToDo) {

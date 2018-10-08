@@ -11,7 +11,7 @@
     import ToDoList from '../components/ToDoList';
 
     @Component({
-        components: {ToDoList, ToDoElement}
+        components: {ToDoList}
     })
     export default class ToDos extends Vue {
         get toDos(): ToDo[] {
