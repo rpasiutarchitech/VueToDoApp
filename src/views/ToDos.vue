@@ -15,14 +15,7 @@
     })
     export default class ToDos extends Vue {
         get toDos(): ToDo[] {
-            return [
-                {
-                    text: 'first todo'
-                },
-                {
-                    text: 'second todo'
-                }
-            ];
+            return this.$store.state.toDos;
         }
     }
 </script>
