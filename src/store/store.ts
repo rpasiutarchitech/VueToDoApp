@@ -25,6 +25,13 @@ const toDoStore: StoreOptions<ToDoState> = {
         [ADD_TO_DO](toDoState: ToDoState, payload: ToDo) {
             toDoState.toDos.push(payload);
         }
+    },
+    actions: {
+        [ADD_TO_DO](context, payload: ToDo) {
+            setTimeout(function () {
+                context.commit(ADD_TO_DO, payload);
+            }, 2000);
+        }
     }
 };
 

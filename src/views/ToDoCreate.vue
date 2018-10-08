@@ -5,6 +5,7 @@
         </div>
         <div>
             <button @click="createToDo">Create</button>
+            <button @click="createToDoAction">Create (action)</button>
         </div>
     </div>
 </template>
@@ -25,6 +26,13 @@
 
         createToDo() {
             this.$store.commit(ADD_TO_DO, {
+                text: this.toDoText
+            });
+            this.$router.push('/todos');
+        }
+
+        createToDoAction() {
+            this.$store.dispatch(ADD_TO_DO, {
                 text: this.toDoText
             });
             this.$router.push('/todos');
